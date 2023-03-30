@@ -40,9 +40,36 @@ function Navbar({selectedPage, setSelectedPage}){
                         </div>
                     ) : 
                     (
-                        <div></div>
+                        <button 
+                            className="rounded-full bg-red p-2"
+                            onClick={()=>setIsMenuToggled(!isMenuToggled)}    
+                        >
+                            <img src="../assets/menu-icon.svg" alt="menu-icon" />
+                        </button>
                     )
                 }
+
+                {/* MOBILE POPUP */}
+                {!isAboveSmallScreens && isMenuToggled && (
+                    <div className="fixed top-0 right-0 h-full w-[300px] bg-blue">
+                        {/* close button */}
+                        <div className="flex justify-end p-12">
+                            <button onClick={()=>setIsMenuToggled(!isMenuToggled)}>
+                                <img src="../assets/close-icon.svg" alt="close-icon" />
+                            </button>
+                        </div>
+
+                        {/* menu items */}
+                        <div className="flex flex-col gap-10 ml-[33%] text-2xl text-deep-blue">
+                            <Link page="Home" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page="Skills" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page="Projects" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page="Testimonials" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                            <Link page="Contact" selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+                        </div>
+
+                    </div>
+                )}
             </div>
         </nav>
     )
