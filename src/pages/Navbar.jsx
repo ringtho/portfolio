@@ -18,12 +18,13 @@ function Link({page, selectedPage, setSelectedPage}){
     )
 }
 
-function Navbar({selectedPage, setSelectedPage}){
+function Navbar({isTopOfPage, selectedPage, setSelectedPage}){
     const [isMenuToggled, setIsMenuToggled] = useState(false)
     const isAboveSmallScreens = useMediaQuery("(min-width: 768px)")
+    const navbarBackground = isTopOfPage ? "" : "bg-red"
     
     return (
-        <nav className={`z-40 fixed top-0 py-6 w-full`}>
+        <nav className={`${navbarBackground} z-40 fixed top-0 py-6 w-full`}>
             <div className="flex items-center justify-between mx-auto w-5/6">
                 <h4 className="font-playfair font-bold text-3xl">JE</h4>
 
