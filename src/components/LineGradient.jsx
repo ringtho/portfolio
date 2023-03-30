@@ -1,11 +1,7 @@
 
+function LineGradient({ width = "w-full"}){
 
-
-function LineGradient(){
-
-    return (
-        <div>Smith</div>
-    )
+    return <div className={`h-0.5 ${width} bg-gradient-rainblue`} />
 }
 
 export default LineGradient
