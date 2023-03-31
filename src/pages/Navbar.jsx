@@ -4,6 +4,7 @@ import useMediaQuery from "../hooks/useMediaQuery"
 
 function Link({page, selectedPage, setSelectedPage}){
     const lowerCasePage = page.toLowerCase()
+    console.log(lowerCasePage)
 
     return (
         <AnchorLink 
