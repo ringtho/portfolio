@@ -9,6 +9,7 @@ import Projects from "./pages/Projects";
 import Testimonials from "./pages/Testimonials";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
+import { motion } from "framer-motion"
 
 function App() {
   const [selectedPage, setSelectedPage] = useState("home")
