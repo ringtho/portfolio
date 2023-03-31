@@ -16,6 +16,7 @@ function Contact(){
         <section id="contact" className="py-48">
             {/* HEAADINGS */}
             <motion.div
+            className="flex justify-end w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -27,10 +28,10 @@ function Contact(){
             >
                 <div>
                     <p className="font-playfair font-semibold text-4xl">
-                        <span className="yellow">CONTACT ME</span> TO GET STARTED
+                        <span className="text-yellow">CONTACT ME</span> TO GET STARTED
                     </p>
                     <div className="flex md:justify-end my-5">
-                        <LineGradient width="mx-auto w-2/4" />
+                        <LineGradient width="w-1/2" />
                     </div>
                 </div>
             </motion.div>
@@ -61,7 +62,7 @@ function Contact(){
                     <form
                     target="_blank"
                     onSubmit={onSubmit}
-                    action="https://formsubmit.co/sringtho@gmail.com"
+                    action="https://formsubmit.co/e1a63e76130bc627896e4be2661e9b17"
                     method="POST"
                     >
                         <input 
